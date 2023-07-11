@@ -39,9 +39,13 @@
                 if(!regName.test(name)){
                     alert('Please enter a valid name.');
                     return false;
-                }else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=mail.length){  
-                    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-                    return false;  
+                }
+
+                else if (!emailRegex.test(email)) {
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    alert("Invalid email address");
+                    return false;
+
                 }else if(mobile.length<10){  
                     alert("Mobile no. must be 10 characters long.");  
                     return false;  
