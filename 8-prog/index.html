@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Student details</title>
+      <script type="text/javascript">
+        function evals(){
+           var t1 = parseInt(document.forms["myform"]["t1"].value);
+           var t2 = parseInt(document.forms["myform"]["t2"].value);
+           var t3 = parseInt(document.forms["myform"]["t3"].value);
+           var reg = document.forms["myform"]["regno"].value;
+           var sub = document.forms["myform"]["sub"].value;
+           if(reg == "") {
+               alert( "Please enter register no." );
+               return false;
+           }else if(sub == "") {
+               alert( "Please enter subject code" );
+               return false;
+           }else if(t1>20 || t2>20 || t3 >20){
+               alert("Invalid Marks. Marks range : 0 - 20.Enter Again.");
+               return false;
+           }else if(isNaN(t1)){
+               alert("Please provide Test-1 marks");
+               return false;
+           }else if(isNaN(t2)){
+               alert("Please provide Test-2 marks");
+               return false;
+           }else if(isNaN(t3)){
+               alert("Please provide Test-3 marks");
+               return false;
+           }
+           var max1 = Math.max(t1,t2,t3);
+           var min = Math.min(t1,t2,t3);
+           var max2 = t1+t2+t3-max1-min;
+           var avg = eval((max1+max2)/2);
+           alert("Avarage marks : "+avg);
+        }
+     </script>
+  </head>
+  <body>
+      <h1>Enter marks details: </h1>
+      <form name="myform" onsubmit="return evals()">
+          <label>Register Number : </label>
+          <input type="text" name="regno" id ="regno" /><br/>
+          <label>Subject code : </label>
+          <input type="text" name="sub" id ="sub" /><br/>
+          <label>Test-1: </label>
+          <input type="number" id="t1" name="t1"/><br/>       
+          <label>Test-2: </label>
+          <input type="number" id="t2" name="t2"/><br/>
+          <label>Test-3: </label>
+          <input type="number" id="t3" name="t3"/><br/>
+          <input type="submit" value="submit" />
+      </form>
+  </body>
+</html>
