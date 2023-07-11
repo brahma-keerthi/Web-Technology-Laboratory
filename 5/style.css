@@ -1,58 +1,33 @@
-  h1 {
-    font-family: Arial, sans-serif;
-    font-style: italic;
+.Bgimg1{
+  width : 100%;
+  height: 400px;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d836c2f5-3610-438c-8039-4b1a83a07483/dfc5m1v-ef4945b5-509e-4314-a4c5-22aae979f602.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4MzZjMmY1LTM2MTAtNDM4Yy04MDM5LTRiMWE4M2EwNzQ4M1wvZGZjNW0xdi1lZjQ5NDViNS01MDllLTQzMTQtYTRjNS0yMmFhZTk3OWY2MDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WthVLzY_CM0akrliFcVZJ26rfLsrVSvWmqZcIM6y8WU'), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiSVN6_hATZ690_kvhkoc9MdNZaBD-BzbqDXExti8GPEAxrpwYgynLzg1rQdujmhiUt0&usqp=CAU');
+  background-repeat: repeat;
   }
+  .Bgimg2{
+    width : 100%;
+    height: 400px;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d836c2f5-3610-438c-8039-4b1a83a07483/dfc5m1v-ef4945b5-509e-4314-a4c5-22aae979f602.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4MzZjMmY1LTM2MTAtNDM4Yy04MDM5LTRiMWE4M2EwNzQ4M1wvZGZjNW0xdi1lZjQ5NDViNS01MDllLTQzMTQtYTRjNS0yMmFhZTk3OWY2MDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WthVLzY_CM0akrliFcVZJ26rfLsrVSvWmqZcIM6y8WU'), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiSVN6_hATZ690_kvhkoc9MdNZaBD-BzbqDXExti8GPEAxrpwYgynLzg1rQdujmhiUt0&usqp=CAU');
+    background-repeat: no-repeat;
+    }
+a{
+  color : #54e826;
+  text-decoration:none;
+}
+a:visited{
+  background-color : #7a2cf0;
+}
+a:hover{
+  color : #ea2424;
+}
+a:active{
+  color:#000;
+}
+.hide {
+  visibility: hidden;
+}
 
-  p {
-    font-family: 'Times New Roman', serif;
-  }
-
-  a{
-    font-size: 25px;
-  }
-
-  a:link {
-    color: blue;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: orange;
-  }
-
-  a:hover {
-    color: red;
-    text-decoration: underline;
-  }
-
-  a:active {
-    color: green;
-  }
-
-  .hidden-element {
-    visibility: hidden;
-  }
-
-  .bg{
-    min-height: 60vh;
-  }
-  .norepeat{
-    background: url('https://clipart-library.com/data_images/320465.png') red no-repeat;
-  }
-  .repeat{
-    background: url('https://clipart-library.com/data_images/320465.png') blue;
-  }
-
-  .bold{
-    font-weight: bold;
-  }
-  .italic{
-    font-style: italic;
-  }
-  .oblique{
-    font-style: oblique;
-  }
-  section{
-    border: 1px solid black;
-    padding: 10px;
-  }
+.myDIV:hover + .hide {
+  visibility: visible;
+  color: red;
+}

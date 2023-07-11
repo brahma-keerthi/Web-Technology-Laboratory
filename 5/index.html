@@ -1,47 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>CSS Design Example</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section>
+<html lang="en">
+    <head>
+        <title>CSS Demo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>CSS Demonstration</h1><hr>
+        <div>
+            <h3>i.Different font size and font styles:</h3>
+            <p style = "font-family: 'Times New Roman', Times, serif;">This is serif font- Times New Roman</p>
+            <p style= "font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">This is serif font - Segoe UI</p>
+            <p style= "font-family:Arial, sans-serif; font-size: 1.5em; color: #8f31e6">Arial font of different size and color</p>
+            <p style= "font-family:Helvetica;">This is Helvetica</p> 
+        </div>
+        <div>
+            <h3>ii.Controlling the repetition of image with background-repeat property:</h3>
+            <h2> BG image demo ( Repeat ) </h2>
+            <div class = "Bgimg1"></div>
 
-    <h1>Different Font Styles</h1>
-    
-    <p>This is a normal paragraph.</p>
-    <p class="italic">This paragraph is italic</p>
-    <p class="oblique">This paragraph is oblique</p>
-    <p class="bold">This paragraph is bold</p>
-    <h1>This is h1</h1>
-    <h2>This is h2</h2>
-    <h6>This is h6</h6>
-    <h3>Link Styles</h3>
-  </section>
-  <section>
-    <p>This paragraph demonstrates different link styles.</p>
-    <p>Active: green <br> Visited: orange <br> Hover: red <br> Link:blue</p>
-    <ul>
-      <li><a href="#1">Link 1</a></li>
-      <li><a href="#2">Link 2</a></li>
-      <li><a href="#3">Link 3</a></li>
-      <li><a href="#4">Link 4</a></li>
-    </ul>
-  </section>
-    <section>
-      <h4>Element Visibility</h4>
-      <p>This paragraph demonstrates the element visibility property.</p>
-      <div class="hidden-element">
-        This element is hidden.
-      </div>
-    </section>
-    <section>
-      <h1>Background no repeat</h1>
-      <div class="bg repeat"></div>
-      <h1>Background no repeat</h1>
-      <div class="bg norepeat"></div>
-    </section>
-      
-    </body>
-    </html>
-    
+            <h2> BG image demo ( No - repeat ) </h2>
+            <div class = "Bgimg2">div>
+        </div>
+        <div class="links">
+            <h3>iii.Style for links:</h3>
+            <p>Link looks different when hovered and when it has already been visited</p>
+            <a href ="https://nintendo.fandom.com/wiki/List_of_Mario_games">Link1 </a>
+            <a href = "https://variety.com/2023/film/news/super-mario-bros-movie-box-office-records-opening-weekend-1235577764/" >Link2 </a> 
+        </div> 
+        <div>
+            <h3>iv. Element visibility property</h3>
+            <div class="myDIV">Hover over me.</div>
+            <div class="hide">
+                <img src="https://thumbs.dreamstime.com/b/invisible-man-19395928.jpg" width = "100px" height="150px"><br>
+                I am an invisible man!!!<br>I become visible when someone hovers over the line above.
+            </div>
+        </div>
+    </body> 
+</html>
