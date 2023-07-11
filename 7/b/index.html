@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+</head>
+<body>
+    <h1>Form Validation Example</h1>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+
+        <label for="mobile">Mobile No:</label>
+        <input type="tel" id="mobile">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="text" id="color">
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Combined Information</h2>
+    <textarea id="displayInfo" rows="5" cols="30" readonly></textarea>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const displayInfo = document.getElementById('displayInfo');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                displayCombinedInfo();
+            }
+        });
+
+        function validateForm() {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const mobileInput = document.getElementById('mobile');
+            const genderInput = document.getElementById('gender');
+            const colorInput = document.getElementById('color');
+
+            if (nameInput.value.trim().length < 10) {
+                alert('Name should be less than or equal to 10 characters');
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.value.trim() === '' || !emailRegex.test(emailInput.value.trim())) {
+                alert('Email is required in correct format');
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(mobileInput.value.trim())) {
+                alert('Mobile No should be exactly 10 digits');
+                return false;
+            }
+
+            if (genderInput.value === '') {
+                alert('Gender is required');
+                return false;
+            }
+
+            if (colorInput.value === '') {
+                alert('Favorite Color is required');
+                return false;
+            }
+            return true;
+        }
+
+        function displayCombinedInfo() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const gender = document.getElementById('gender').value;
+            const color = document.getElementById('color').value;
+
+            const combinedInfo = `Name: ${name}\nEmail: ${email}\nMobile No: ${mobile}\nGender: ${gender}\nFavorite Color: ${color}`;
+            displayInfo.value = combinedInfo;
+        }
+    </script>
+</body>
+</html>
