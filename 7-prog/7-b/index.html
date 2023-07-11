@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS validation</title>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validateform()">
+            <label>Name : </label>
+            <input type="text" id="name" name="Full name" placeholder="Full name"><br>
+            <label>Email : </label>
+            <input type="email" id="mail" name="email" placeholder="Mail"><br>
+            <label>Mobile no. : </label>
+            <input type="text" id="mobile" name="mobile" placeholder="Mobile"><br>
+            <label>Gender : </label>
+            <select name = "gender">
+                <option value = "Choose" selected>[Choose Yours]</option>
+                <option value = "Male">Male</option>
+                <option value = "Female">Female</option>
+                <option value = "Others">Others</option>
+             </select><br>
+            <label>Favourite colour : </label>
+            <input type="text" id="favc" name="favc"><br>
+            <input type="submit" value="submit"><br>
+        </form>
+        
+        <script>
+            function validateform(){  
+                var name=document.myform.name.value;  
+                var mobile=document.myform.mobile.value;  
+                var mail=document.myform.mail.value;
+                var gender=document.myform.gender.value; 
+                var atposition=mail.indexOf("@");  
+                var dotposition=mail.lastIndexOf("."); 
+                var favc = document.myform.favc.value;
+                var check = /^[a-zA-Z]+$/;
+                var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+                if(!regName.test(name)){
+                    alert('Please enter a valid name.');
+                    return false;
+                }else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=mail.length){  
+                    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                    return false;  
+                }else if(mobile.length<10){  
+                    alert("Mobile no. must be 10 characters long.");  
+                    return false;  
+                }else if( gender == "Choose" ) {
+                    alert("Please provide your gender!");
+                    return false;
+                }else if(!check.test(favc)) {
+                    alert("Please enter valid colour!");
+                    return false;
+                }
+                document.write("Name : "+name);
+                document.write("<br>Email : "+mail);
+                document.write("<br>Mobile no. : "+mobile);
+                document.write("<br>Gender : "+gender);
+                document.write("<br>Favourite colour : "+favc);
+            }
+        </script>
+    </body>
+</html>
